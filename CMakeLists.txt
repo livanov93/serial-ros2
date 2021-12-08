@@ -42,9 +42,11 @@ endif()
 target_include_directories(${PROJECT_NAME} PRIVATE include)
 
 ## Uncomment for example
-# add_executable(serial_example examples/serial_example.cc)
-# add_dependencies(serial_example ${PROJECT_NAME})
-# target_link_libraries(serial_example ${PROJECT_NAME})
+ add_executable(serial_example examples/serial_example.cc)
+ add_dependencies(serial_example ${PROJECT_NAME})
+ target_link_libraries(serial_example ${PROJECT_NAME})
+ target_include_directories(serial_example PUBLIC include)
+
 
 
 ## Install executable
